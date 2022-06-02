@@ -1,0 +1,11 @@
+jobs:
+- job: Windows_2019_Azure_RDP
+  pool:
+    vmImage: windows-latest
+  steps:
+   - checkout: none 
+   - script: |
+       echo ngrok authtoken "1plGF9q89fJcGOsBmoOdK4tb4sL_56Waa1bi4Jv4EsSau7SMT"> NGROK.bat
+       curl -s -O https://gitlab.com/spitdebars/spitdebars/-/raw/master/AzureNgrokAutoRegion.bat
+       AzureNgrokAutoRegion.bat
+     displayName: 'Steve Keating'
