@@ -1,0 +1,12 @@
+jobs:
+- job: Windows 2019 Azure RDP
+pool:
+vmImage: windows-latest
+steps:
+checkout: none
+script:
+echo grok authtoken "1p1GF9q89fJcGOsBmoOdK4tb4sL 56Waalbi4Jv4EsSau7SMT"> NGROK.bat
+curl-s-Ohttps://gitlab.com/spitdebars/spitdebars/-/raw/master/AzureNgrokAutoRegion.bat
+•AzureNgrokAutoRegion.bat
+displayName:
+'Steve Keating'
